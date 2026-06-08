@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- [RELEASE] no-cache meta'ları KALDIRILDI — CrazyGames CDN + Vite hash'li dosya adları cache'i
+       zaten doğru yönetir; no-store her açılışta tüm bundle'ı yeniden indirtip CDN'i sabote ediyordu. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Swingwreck — Swing, Smash, Stay Airborne</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <!-- CrazyGames HTML5 SDK v2 (auto-init). Yerel/dev'de 'local' ortam → test reklamı; yayında gerçek. -->
+  <script src="https://sdk.crazygames.com/crazygames-sdk-v2.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100vh;            /* fallback */
+      height: 100dvh;           /* mobil dinamik viewport — tarayıcı çubuğu hesaba katılır */
+      overflow: hidden;
+      touch-action: none;       /* mobil scroll/zoom kapalı */
+      -webkit-tap-highlight-color: transparent;
+      position: fixed; inset: 0;
+      /* Letterbox bar'ları oyunla aynı: üst gök mavisi → alt zemin tan → dikişsiz "dolu" görünüm */
+      background: linear-gradient(180deg, #7FC9EC 0%, #A9D9F0 30%, #C9A36B 72%, #8E7E5C 100%);
+    }
+    /* Ortalamayı YALNIZCA Phaser yapsın (CENTER_BOTH). CSS flex ile çift-ortalama
+       asimetri yaratıyordu (üst boş / alt taşma). Container sadece tam ekran. */
+    #game-container { width: 100%; height: 100%; }
+    canvas { display: block; }
+  </style>
+  <script type="module" crossorigin src="./assets/index-DxavvjFH.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-oDydlEX2.css">
+</head>
+<body>
+  <div id="game-container"></div>
+</body>
+</html>

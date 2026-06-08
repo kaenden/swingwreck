@@ -1,0 +1,15 @@
+Ses efektleri (SFX) — Kenney (kenney.nl)
+Paketler: Interface Sounds, Impact Sounds
+Lisans: CC0 1.0 (Public Domain) — atıf gerekmez, ama teşekkürler Kenney!
+
+Kullanım eşlemesi (AudioSystem.js):
+  click.ogg           → UI buton tık
+  hit1/hit2.ogg       → bloğa çarpma (kırılmadan)
+  wood1/wood2.ogg     → ahşap kırılma
+  glass1/glass2.ogg   → cam kırılma
+  stone1/stone2.ogg   → taş kırılma (impactMining)
+  metal1/metal2.ogg   → metal kırılma
+  boom.ogg            → patlama (impactPlate_heavy) + prosedürel sub-bass
+
+Patlama/kombo/kazanma kuyruğu ve salınım = prosedürel (Web Audio), dosyada
+uygun karşılığı olmadığı için. Örnek yüklenemezse her ses prosedürele düşer.
