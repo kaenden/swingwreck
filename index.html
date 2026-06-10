@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <!-- [RELEASE] no-cache meta'ları KALDIRILDI — CrazyGames CDN + Vite hash'li dosya adları cache'i
-       zaten doğru yönetir; no-store her açılışta tüm bundle'ı yeniden indirtip CDN'i sabote ediyordu. -->
+  <!-- [CACHE] index.html için no-cache = "kullanmadan önce YENİDEN-DOĞRULA" (no-store DEĞİL → değişmediyse
+       304 döner, bundle'ı yeniden indirmez). GitHub Pages bare link'in (kaenden.github.io/swingwreck) ?sorgu
+       olmadan hep güncel index.html almasını sağlar; Vite hash'li asset'ler zaten cache-güvenli, CrazyGames'i sabote etmez. -->
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Pragma" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>Swingwreck — Swing, Smash, Stay Airborne</title>
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -27,7 +30,7 @@
     #game-container { width: 100%; height: 100%; }
     canvas { display: block; }
   </style>
-  <script type="module" crossorigin src="./assets/index-DK7kJJ-U.js"></script>
+  <script type="module" crossorigin src="./assets/index-eaMaXr93.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/phaser-CaWnzXme.js">
   <link rel="stylesheet" crossorigin href="./assets/index-oDydlEX2.css">
 </head>
