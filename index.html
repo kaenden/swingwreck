@@ -9,7 +9,7 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>Swingwreck — Swing, Smash, Stay Airborne</title>
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="icon" type="image/png" href="./favicon.png" />
   <!-- CrazyGames HTML5 SDK v2 (auto-init). Yerel/dev'de 'local' ortam → test reklamı; yayında gerçek. -->
   <script src="https://sdk.crazygames.com/crazygames-sdk-v2.js"></script>
   <style>
@@ -21,17 +21,19 @@
       overflow: hidden;
       touch-action: none;       /* mobil scroll/zoom kapalı */
       -webkit-tap-highlight-color: transparent;
+      -webkit-user-select: none; user-select: none;   /* [CG] mobil uzun-bas metin seçimi engellenir (gereksinim) */
       position: fixed; inset: 0;
-      /* Letterbox bar'ları oyunla aynı: üst gök mavisi → alt zemin tan → dikişsiz "dolu" görünüm */
-      background: linear-gradient(180deg, #7FC9EC 0%, #A9D9F0 30%, #C9A36B 72%, #8E7E5C 100%);
+      /* [CG] Letterbox bar'ları = BLUR'LU GECE SAHNESİ backdrop (masaüstü geniş-ekranda boş gradient yerine
+         atmosferik, kasıtlı tasarlanmış görünüm — CG "empty/unprofessional" izlenimini kapatır). */
+      background: #0A0E22 url('./assets/backgrounds/backdrop.webp') center center / cover no-repeat;
     }
     /* Ortalamayı YALNIZCA Phaser yapsın (CENTER_BOTH). CSS flex ile çift-ortalama
        asimetri yaratıyordu (üst boş / alt taşma). Container sadece tam ekran. */
     #game-container { width: 100%; height: 100%; }
     canvas { display: block; }
   </style>
-  <script type="module" crossorigin src="./assets/index-CeDM2ewW.js"></script>
-  <link rel="modulepreload" crossorigin href="./assets/phaser-CaWnzXme.js">
+  <script type="module" crossorigin src="./assets/index-CCbfLw11.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/phaser-DdCsgmnN.js">
   <link rel="stylesheet" crossorigin href="./assets/index-oDydlEX2.css">
 </head>
 <body>
